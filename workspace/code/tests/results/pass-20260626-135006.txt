@@ -1,0 +1,721 @@
+PHPUnit 11.5.50 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 8.5.7
+Configuration: /home/user/Program/Saas/product-onebase/phpunit.xml
+
+
+   PASS  Tests\Unit\AdminPanelProviderMiddlewareTest
+  ✓ it includes the locale middleware in the admin panel stack           0.44s  
+
+   PASS  Tests\Unit\AnalyticsDateRangeTest
+  ✓ it resolves last 30 days correctly                                   0.06s  
+  ✓ it resolves month to date correctly                                  0.05s  
+  ✓ it swaps custom range when dates are reversed                        0.05s  
+
+   PASS  Tests\Unit\AnalyticsServiceTest
+  ✓ it calculates collected financial and membership metrics within a c… 3.26s  
+
+   PASS  Tests\Unit\DashboardHeaderActionsTest
+  ✓ it does not register quick actions in the dashboard header           0.07s  
+  ✓ it does not show an export button in the dashboard header view       0.07s  
+
+   PASS  Tests\Unit\DashboardLayoutTest
+  ✓ it renders the dashboard grid as 4 columns on md                     0.07s  
+  ✓ it includes membership overview on the dashboard                     0.06s  
+  ✓ it positions spending overview next to financial at md               0.05s  
+  ✓ it keeps membership and recent transactions full width on md         0.05s  
+
+   PASS  Tests\Unit\DiscountsTest
+  ✓ it builds discount options from settings                             0.05s  
+  ✓ it calculates discount amount                                        0.05s  
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                    0.05s  
+
+   PASS  Tests\Unit\FilamentLocalizationTest
+  ✓ it localizes Filament resource labels with dataset "fr"              0.06s  
+  ✓ it localizes Filament resource labels with dataset "ar"              0.06s  
+
+   PASS  Tests\Unit\FiscalYearTest
+  ✓ it calculates fiscal year span for dates after the start             0.04s  
+  ✓ it shifts fiscal year back when date is before the start             0.04s  
+
+   PASS  Tests\Unit\FollowUpTableColumnsTest
+  ✓ it exposes reusable follow-up table columns                          0.04s  
+  ✓ it exposes reusable follow-up filters and actions                    0.07s  
+
+   PASS  Tests\Unit\GlobalSearchConfigurationTest
+  ✓ resources define meaningful global search attributes                 0.04s  
+  ✓ resources provide informative global search titles and details       0.07s  
+
+   PASS  Tests\Unit\InvoiceCalculatorTest
+  ✓ it calculates an invoice summary with rounding and clamping          0.04s  
+  ✓ it never returns negative totals or dues                             0.04s  
+
+   PASS  Tests\Unit\InvoiceDisplayStatusLabelTest
+  ✓ it shows issued label for issued invoices                            0.04s  
+  ✓ it shows paid label for paid invoices                                0.04s  
+
+   PASS  Tests\Unit\InvoiceNumberGeneratorTest
+  ✓ no existing invoices returns g y1                                    0.04s  
+  ✓ two in range invoices returns g y3                                   0.06s  
+  ✓ out of range invoices returns g y1                                   0.05s  
+
+   PASS  Tests\Unit\JsonSettingsRepositoryCacheTest
+  ✓ it returns updated settings after put() within the same request      0.04s  
+
+   PASS  Tests\Unit\MemberCodeGeneratorTest
+  ✓ generated member code uses m prefix and three uppercase alphanumeri… 0.05s  
+  ✓ member creation assigns global unique m prefixed codes               0.06s  
+  ✓ member code is locked after creation                                 0.06s  
+  ✓ soft deleted member code is not reused                               0.06s  
+
+   PASS  Tests\Unit\PaymentMethodTest
+  ✓ it normalizes and classifies payment methods                         0.05s  
+  ✓ it exposes stable payment method options for forms                   0.04s  
+
+   PASS  Tests\Unit\SetAppLocaleMiddlewareTest
+  ✓ it syncs Carbon locale with app locale                               0.05s  
+
+   PASS  Tests\Feature\Api\AnalyticsApiTest
+  ✓ it returns analytics payloads                                        0.13s  
+
+   PASS  Tests\Feature\Api\ApiCrudFlowTest
+  ✓ it supports core CRUD flows for integrations                         0.80s  
+
+   PASS  Tests\Feature\Api\ApiPermissionsTest
+  ✓ it returns an unauthenticated JSON response without redirecting to…  0.05s  
+  ✓ it forbids access when required permissions are missing              0.05s  
+  ✓ it allows access when the correct permission is granted              0.07s  
+
+   PASS  Tests\Feature\Api\AuthApiTest
+  ✓ it logs in and returns a bearer token                                0.08s  
+  ✓ it logs out and revokes the current token                            0.07s  
+
+   PASS  Tests\Feature\Api\LocaleApiTest
+  ✓ it localizes API error messages via the locale query parameter       0.07s  
+
+   PASS  Tests\Feature\Api\RichFilteringApiTest
+  ✓ it supports allowlisted filters and includes                         0.07s  
+  ✓ it returns 400 for invalid query parameters                          0.06s  
+
+   PASS  Tests\Feature\Api\SettingsApiTest
+  ✓ it reads and updates settings via the API                            0.05s  
+
+   PASS  Tests\Feature\ApiTest
+  ✓ feature one api resources include source and exclude goal            0.05s  
+
+   FAIL  Tests\Feature\BusinessSlugLoginTest
+  ✓ feature four business slug login files are wired                     0.04s  
+  ⨯ feature four mandatory temp data contains business slugs             0.06s  
+  ✓ feature four reserved slug rule blocks generic paths                 0.04s  
+
+   PASS  Tests\Feature\CascadingSoftDeletesTest
+  ✓ soft deleting an enquiry cascades to follow ups and restore reverse… 0.07s  
+  ✓ soft deleting a member cascades to subscriptions and invoices        0.08s  
+
+   PASS  Tests\Feature\DashboardDemoSeederTest
+  ✓ dashboard demo seeder creates enough data for analytics widgets      7.79s  
+  ✓ dashboard demo seeder avoids invoice number collisions with trashed… 0.14s  
+  ✓ dashboard demo seeder does not queue invoice emails                  7.17s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.07s  
+
+   PASS  Tests\Feature\ExpiringNotificationCommandTest
+  ✓ it sends notification for gym expiring within 10 days                0.14s  
+  ✓ it does NOT send notification for gym expiring beyond 10 days        0.09s  
+  ✓ it does NOT send notification for suspended gym                      0.12s  
+  ✓ it does NOT send notification for already-expired gym                0.10s  
+  ✓ it rejects invalid --days option                                     0.11s  
+
+   PASS  Tests\Feature\ExpiringSoonSubscriptionsTableWidgetTest
+  ✓ it lists only subscriptions that are ending within the expiring win… 0.12s  
+  ✓ it lists only subscriptions that have already ended in the expired…  0.07s  
+  ✓ it shows only the top 5 expiring memberships on the dashboard widge… 0.23s  
+  ✓ it shows only the top 5 expired memberships on the dashboard widget  0.15s  
+
+   PASS  Tests\Feature\FacilityStaffRelationManagerTest
+  ✓ it shows only facility staff for current gym via facilityStaff rela… 0.07s  
+  ✓ it facilityStaff excludes users with username admin                  0.07s  
+  ✓ it facilityUsers scope excludes usernames colliding with system_adm… 0.05s  
+
+   PASS  Tests\Feature\FinancialMetricsWidgetTest
+  ✓ it does not render sparklines on net revenue and total collected ca… 0.08s  
+
+   PASS  Tests\Feature\FollowUpTest
+  ✓ follow up feature files remain present after feature one             0.04s  
+
+   PASS  Tests\Feature\InvoiceDocumentControllerTest
+  ✓ it forbids invoice preview when the user lacks permission            0.11s  
+  ✓ it renders invoice preview when the user has permission              0.42s  
+  ✓ it downloads the invoice as a PDF when the user has permission       0.36s  
+  ✓ it shows a friendly error state when the invoice is missing require… 0.12s  
+
+   PASS  Tests\Feature\InvoiceDocumentViewRendersTest
+  ✓ invoice document view renders Inter font faces and zero page margin… 0.08s  
+
+   PASS  Tests\Feature\InvoiceEmailServiceTest
+  ✓ it sends invoice issued email with reply-to when gym email is confi… 0.42s  
+
+   PASS  Tests\Feature\InvoiceIssuedEmailJobTest
+  ✓ it dispatches the invoice issued email job when enabled in settings  0.07s  
+
+   PASS  Tests\Feature\InvoicePaymentReceiptEmailJobTest
+  ✓ it dispatches the payment receipt email job when enabled in setting… 0.08s  
+
+   PASS  Tests\Feature\InvoiceTotalsConsistencyTest
+  ✓ it keeps subscription_fee as gross and computes tax/total from sett… 0.08s  
+
+   PASS  Tests\Feature\LeadTest
+  ✓ enquiry form uses requested source options and removes goal          0.05s  
+  ✓ enquiry model and api schema do not expose goal                      0.05s  
+  ✓ feature two enquiry dob is optional and lead owner labels are clean  0.06s  
+
+   PASS  Tests\Feature\LocaleSwitcherTest
+  ✓ it persists the selected locale in settings                          0.10s  
+  ✓ it ignores unsupported locales                                       0.06s  
+  ✓ it renders the current locale label in the trigger                   0.05s  
+
+   PASS  Tests\Feature\MarkSubscriptionsStatusCommandTest
+  ✓ it marks expired and expiring subscriptions and sends database noti… 0.12s  
+
+   PASS  Tests\Feature\MemberTest
+  ✓ member form uses requested source options and removes goal           0.05s  
+  ✓ member model and api schema do not expose goal                       0.04s  
+  ✓ feature three members receive locked global m prefixed codes         0.04s  
+
+   PASS  Tests\Feature\MembershipMetricsWidgetTest
+  ✓ it does not show an expiring badge on the active members card        0.08s  
+
+   PASS  Tests\Feature\PaymentTest
+  ✓ invoice transaction payment files remain present after feature one   0.04s  
+
+   PASS  Tests\Feature\RecentTransactionsTableWidgetTest
+  ✓ it shows only the top 5 recent transactions on the dashboard widget  0.20s  
+
+   PASS  Tests\Feature\RolePermissionTest
+  ✓ role and permission files remain present after feature one           0.04s  
+
+   PASS  Tests\Feature\SettingsPagePersistenceTest
+  ✓ it persists settings via the settings repository when saving         0.48s  
+
+   PASS  Tests\Feature\SubscriptionTest
+  ✓ subscription feature files remain present after feature one          0.04s  
+
+   PASS  Tests\Feature\TenantIsolationTest
+  ✓ tenant isolation trait remains present after feature one             0.04s  
+  ✓ feature four slug login preserves tenant isolation contract          0.04s  
+
+   PASS  Tests\Feature\UserCreateFormRolesTest
+  ✓ it exposes exactly 5 facility role options via enum                  0.04s  
+  ✓ it does NOT expose Spatie role names in facility options             0.06s  
+  ✓ it maps facility OWNER to Spatie super_admin role                    0.05s  
+  ✓ it maps non-owner facility roles to Spatie panel_user role           0.04s  
+  ✓ it rejects unknown role values via tryFrom                           0.04s  
+  ✓ it returns human-readable labels                                     0.04s  
+
+   FAIL  Tests\Feature\UserResourceExcludesAdminsTest
+  ⨯ it excludes system admins from facility users list                   0.06s  
+  ✓ it excludes user with colliding username from facility users list    0.05s  
+  ✓ it excludes user holding super_admin Spatie role                     0.06s  
+
+   PASS  Tests\Feature\ValidationTest
+  ✓ member and enquiry source validation allows only requested values    0.05s  
+  ✓ feature two enquiry dob remains nullable in api validation           0.04s  
+  ────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\BusinessSlugLoginTest > feature four mandatory temp…   
+  Expected: #!/usr/bin/env bash\n
+  # =============================================================================\n
+  # flowAI test runner for Feature 6.1\n
+  ... (217 more lines)
+
+  To contain: db:seed --class=MandatoryTemporaryTestDataSeeder --env=testing
+
+  at tests/Feature/BusinessSlugLoginTest.php:46
+     42▕         $this->assertStringContainsString("'business-two'", $seeder);
+     43▕         $this->assertStringContainsString("'a', 'a'", $seeder);
+     44▕         $this->assertStringContainsString("'b', 'b'", $seeder);
+     45▕         $this->assertStringContainsString("'c', 'c'", $seeder);
+  ➜  46▕         $this->assertStringContainsString('db:seed --class=MandatoryTemporaryTestDataSeeder --env=testing', $testRunner);
+     47▕         $this->assertTrue(strpos($testRunner, 'migrate:fresh --seed --env=testing') < strpos($testRunner, 'MandatoryTemporaryTestDataSeeder'));
+     48▕ 
+     49▕         $this->logPass(__FUNCTION__);
+     50▕     }
+
+  1   tests/Feature/BusinessSlugLoginTest.php:46
+
+  ────────────────────────────────────────────────────────────────────────────  
+   FAILED  Tests\Feature\UserResourceExcludesAdminsTest > it excludes system…   
+  Failed asserting that 3 is identical to 2.
+
+  at tests/Feature/UserResourceExcludesAdminsTest.php:51
+     47▕     // Act
+     48▕     $facilityUsers = User::facilityUsers()->get();
+     49▕ 
+     50▕     // Assert
+  ➜  51▕     expect($facilityUsers->count())->toBe(2);
+     52▕     expect($facilityUsers->pluck('username')->toArray())
+     53▕         ->not->toContain('test_admin_1')
+     54▕         ->toContain('facility_user_1')
+     55▕         ->toContain('facility_user_2');
+
+  1   tests/Feature/UserResourceExcludesAdminsTest.php:51
+
+
+  Tests:    2 failed, 108 passed (539 assertions)
+  Duration: 28.40s
+
+Time: 00:28.099, Memory: 127.00 MB
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/AnalyticsApiTest.php
+ ✔ it returns analytics payloads
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/ApiCrudFlowTest.php
+ ✔ it supports core CRUD flows for integrations
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/ApiPermissionsTest.php
+ ✔ it returns an unauthenticated JSON response without redirecting to a login route
+ ✔ it forbids access when required permissions are missing
+ ✔ it allows access when the correct permission is granted
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/AuthApiTest.php
+ ✔ it logs in and returns a bearer token
+ ✔ it logs out and revokes the current token
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/LocaleApiTest.php
+ ✔ it localizes API error messages via the locale query parameter
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/RichFilteringApiTest.php
+ ✔ it supports allowlisted filters and includes
+ ✔ it returns 400 for invalid query parameters
+
+/home/user/Program/Saas/product-onebase/tests/Feature/Api/SettingsApiTest.php
+ ✔ it reads and updates settings via the API
+
+/home/user/Program/Saas/product-onebase/tests/Feature/CascadingSoftDeletesTest.php
+ ✔ soft deleting an enquiry cascades to follow ups and restore reverses it
+ ✔ soft deleting a member cascades to subscriptions and invoices
+
+/home/user/Program/Saas/product-onebase/tests/Feature/DashboardDemoSeederTest.php
+ ✔ dashboard demo seeder creates enough data for analytics widgets
+ ✔ dashboard demo seeder avoids invoice number collisions with trashed invoices
+ ✔ dashboard demo seeder does not queue invoice emails
+
+/home/user/Program/Saas/product-onebase/tests/Feature/ExampleTest.php
+ ✔ the application returns a successful response
+
+/home/user/Program/Saas/product-onebase/tests/Feature/ExpiringNotificationCommandTest.php
+ ✔ it sends notification for gym expiring within 10 days
+ ✔ it does NOT send notification for gym expiring beyond 10 days
+ ✔ it does NOT send notification for suspended gym
+ ✔ it does NOT send notification for already-expired gym
+ ✔ it rejects invalid --days option
+
+/home/user/Program/Saas/product-onebase/tests/Feature/ExpiringSoonSubscriptionsTableWidgetTest.php
+ ✔ it lists only subscriptions that are ending within the expiring window
+ ✔ it lists only subscriptions that have already ended in the expired tab
+ ✔ it shows only the top 5 expiring memberships on the dashboard widget
+ ✔ it shows only the top 5 expired memberships on the dashboard widget
+
+/home/user/Program/Saas/product-onebase/tests/Feature/FacilityStaffRelationManagerTest.php
+ ✔ it shows only facility staff for current gym via facilityStaff relationship
+ ✔ it facilityStaff excludes users with username admin
+ ✔ it facilityUsers scope excludes usernames colliding with system_admins
+
+/home/user/Program/Saas/product-onebase/tests/Feature/FinancialMetricsWidgetTest.php
+ ✔ it does not render sparklines on net revenue and total collected cards
+
+/home/user/Program/Saas/product-onebase/tests/Feature/InvoiceDocumentControllerTest.php
+ ✔ it forbids invoice preview when the user lacks permission
+ ✔ it renders invoice preview when the user has permission
+ ✔ it downloads the invoice as a PDF when the user has permission
+ ✔ it shows a friendly error state when the invoice is missing required data
+
+/home/user/Program/Saas/product-onebase/tests/Feature/InvoiceDocumentViewRendersTest.php
+ ✔ invoice document view renders Inter font faces and zero page margin css
+
+/home/user/Program/Saas/product-onebase/tests/Feature/InvoiceEmailServiceTest.php
+ ✔ it sends invoice issued email with reply-to when gym email is configured
+
+/home/user/Program/Saas/product-onebase/tests/Feature/InvoiceIssuedEmailJobTest.php
+ ✔ it dispatches the invoice issued email job when enabled in settings
+
+/home/user/Program/Saas/product-onebase/tests/Feature/InvoicePaymentReceiptEmailJobTest.php
+ ✔ it dispatches the payment receipt email job when enabled in settings
+
+/home/user/Program/Saas/product-onebase/tests/Feature/InvoiceTotalsConsistencyTest.php
+ ✔ it keeps subscription_fee as gross and computes tax/total from settings
+
+/home/user/Program/Saas/product-onebase/tests/Feature/LocaleSwitcherTest.php
+ ✔ it persists the selected locale in settings
+ ✔ it ignores unsupported locales
+ ✔ it renders the current locale label in the trigger
+
+/home/user/Program/Saas/product-onebase/tests/Feature/MembershipMetricsWidgetTest.php
+ ✔ it does not show an expiring badge on the active members card
+
+/home/user/Program/Saas/product-onebase/tests/Feature/RecentTransactionsTableWidgetTest.php
+ ✔ it shows only the top 5 recent transactions on the dashboard widget
+
+/home/user/Program/Saas/product-onebase/tests/Feature/SettingsPagePersistenceTest.php
+ ✔ it persists settings via the settings repository when saving
+
+/home/user/Program/Saas/product-onebase/tests/Feature/UserCreateFormRolesTest.php
+ ✔ it exposes exactly 5 facility role options via enum
+ ✔ it does NOT expose Spatie role names in facility options
+ ✔ it maps facility OWNER to Spatie super_admin role
+ ✔ it maps non-owner facility roles to Spatie panel_user role
+ ✔ it rejects unknown role values via tryFrom
+ ✔ it returns human-readable labels
+
+/home/user/Program/Saas/product-onebase/tests/Feature/UserResourceExcludesAdminsTest.php
+ ✘ it excludes system admins from facility users list
+   │
+   │ Failed asserting that 3 is identical to 2.
+   │
+   │ /home/user/Program/Saas/product-onebase/tests/Feature/UserResourceExcludesAdminsTest.php:51
+   │
+ ✔ it excludes user with colliding username from facility users list
+ ✔ it excludes user holding super_admin Spatie role
+
+/home/user/Program/Saas/product-onebase/tests/Unit/AdminPanelProviderMiddlewareTest.php
+ ✔ it includes the locale middleware in the admin panel stack
+
+/home/user/Program/Saas/product-onebase/tests/Unit/AnalyticsDateRangeTest.php
+ ✔ it resolves last 30 days correctly
+ ✔ it resolves month to date correctly
+ ✔ it swaps custom range when dates are reversed
+
+/home/user/Program/Saas/product-onebase/tests/Unit/AnalyticsServiceTest.php
+ ✔ it calculates collected financial and membership metrics within a custom date range
+
+/home/user/Program/Saas/product-onebase/tests/Unit/DashboardHeaderActionsTest.php
+ ✔ it does not register quick actions in the dashboard header
+ ✔ it does not show an export button in the dashboard header view
+
+/home/user/Program/Saas/product-onebase/tests/Unit/DashboardLayoutTest.php
+ ✔ it renders the dashboard grid as 4 columns on md
+ ✔ it includes membership overview on the dashboard
+ ✔ it positions spending overview next to financial at md
+ ✔ it keeps membership and recent transactions full width on md
+
+/home/user/Program/Saas/product-onebase/tests/Unit/DiscountsTest.php
+ ✔ it builds discount options from settings
+ ✔ it calculates discount amount
+
+/home/user/Program/Saas/product-onebase/tests/Unit/ExampleTest.php
+ ✔ that true is true
+
+/home/user/Program/Saas/product-onebase/tests/Unit/FilamentLocalizationTest.php
+ ✔ it localizes Filament resource labels with data set "dataset "fr""
+ ✔ it localizes Filament resource labels with data set "dataset "ar""
+
+/home/user/Program/Saas/product-onebase/tests/Unit/FiscalYearTest.php
+ ✔ it calculates fiscal year span for dates after the start
+ ✔ it shifts fiscal year back when date is before the start
+
+/home/user/Program/Saas/product-onebase/tests/Unit/FollowUpTableColumnsTest.php
+ ✔ it exposes reusable follow-up table columns
+ ✔ it exposes reusable follow-up filters and actions
+
+/home/user/Program/Saas/product-onebase/tests/Unit/GlobalSearchConfigurationTest.php
+ ✔ resources define meaningful global search attributes
+ ✔ resources provide informative global search titles and details
+
+/home/user/Program/Saas/product-onebase/tests/Unit/InvoiceCalculatorTest.php
+ ✔ it calculates an invoice summary with rounding and clamping
+ ✔ it never returns negative totals or dues
+
+/home/user/Program/Saas/product-onebase/tests/Unit/InvoiceDisplayStatusLabelTest.php
+ ✔ it shows issued label for issued invoices
+ ✔ it shows paid label for paid invoices
+
+/home/user/Program/Saas/product-onebase/tests/Unit/JsonSettingsRepositoryCacheTest.php
+ ✔ it returns updated settings after put() within the same request
+
+/home/user/Program/Saas/product-onebase/tests/Unit/PaymentMethodTest.php
+ ✔ it normalizes and classifies payment methods
+ ✔ it exposes stable payment method options for forms
+
+/home/user/Program/Saas/product-onebase/tests/Unit/SetAppLocaleMiddlewareTest.php
+ ✔ it syncs Carbon locale with app locale
+
+Api (Tests\Feature\Api)
+ ✔ Feature one api resources include source and exclude goal
+
+Business Slug Login (Tests\Feature\BusinessSlugLogin)
+ ✔ Feature four business slug login files are wired
+ ✘ Feature four mandatory temp data contains business slugs
+   │
+   │ Failed asserting that '#!/usr/bin/env bash\n
+   │ # =============================================================================\n
+   │ # flowAI test runner for Feature 6.1\n
+   │ # =============================================================================\n
+   │ # Generated by Phase 2 (Code Generation).\n
+   │ # Phase 4 (change.sh) may pin PROJECT_DIR differently if this project moves.\n
+   │ #\n
+   │ # Usage:\n
+   │ #   ./tests/test.sh --super                       # run as system super admin\n
+   │ #   ./tests/test.sh --business=gym1               # run as business admin (user a)\n
+   │ #   ./tests/test.sh --business=gym2               # run as business admin (user b)\n
+   │ #   ./tests/test.sh --filter=Feature61            # run only Feature61 tests\n
+   │ #   ./tests/test.sh --verbose                     # verbose PHPUnit output\n
+   │ #\n
+   │ # Exit codes:\n
+   │ #   0  - all tests passed\n
+   │ #   1  - one or more tests failed\n
+   │ #   2  - environment error (PHP missing, etc.)\n
+   │ #   3  - another instance is already running (PID lock)\n
+   │ # =============================================================================\n
+   │ \n
+   │ set -euo pipefail\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Constants\n
+   │ # -----------------------------------------------------------------------------\n
+   │ # PROJECT_DIR is resolved to the actual project root in this workspace.\n
+   │ # Phase 4 (change.sh) will mirror this value.\n
+   │ readonly PROJECT_DIR="/home/user/Program/Saas/product-onebase"\n
+   │ readonly LOCK_DIR="/tmp/flowai-feature-6.1.lock"\n
+   │ readonly PID_FILE="${LOCK_DIR}/PID"\n
+   │ readonly RESULTS_DIR="${PROJECT_DIR}/tests/results"\n
+   │ readonly PHP_BIN="${PHP_BIN:-php}"\n
+   │ readonly COMPOSER_BIN="${COMPOSER_BIN:-composer}"\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Defaults\n
+   │ # -----------------------------------------------------------------------------\n
+   │ ACTOR_MODE="super"          # super | business\n
+   │ BUSINESS_KEY=""             # gym1 | gym2 | shared\n
+   │ VERBOSE=0\n
+   │ PHPUNIT_FILTER=""\n
+   │ TIMESTAMP="$(date +%Y%m%d-%H%M%S)"\n
+   │ ERROR_LOG="${RESULTS_DIR}/error-${TIMESTAMP}.txt"\n
+   │ PASS_LOG="${RESULTS_DIR}/pass-${TIMESTAMP}.txt"\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Logging helpers\n
+   │ # -----------------------------------------------------------------------------\n
+   │ log_info()  { printf '[INFO]  %s\n' "$*"; }\n
+   │ log_warn()  { printf '[WARN]  %s\n' "$*" >&2; }\n
+   │ log_error() { printf '[ERROR] %s\n' "$*" >&2; }\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Error trap (BS-004)\n
+   │ # -----------------------------------------------------------------------------\n
+   │ on_error() {\n
+   │     local exit_code=$?\n
+   │     local line_no=${1:-?}\n
+   │     log_error "Failed at line ${line_no} (exit code ${exit_code})"\n
+   │     log_error "See ${ERROR_LOG} for full diagnostic output."\n
+   │     cleanup\n
+   │     exit "${exit_code}"\n
+   │ }\n
+   │ \n
+   │ trap 'on_error ${LINENO}' ERR\n
+   │ trap 'cleanup' EXIT INT TERM\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Cleanup — releases the PID lock and removes temp files\n
+   │ # -----------------------------------------------------------------------------\n
+   │ cleanup() {\n
+   │     rm -rf "${LOCK_DIR}" 2>/dev/null || true\n
+   │ }\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # PID lock (BS-002)\n
+   │ # -----------------------------------------------------------------------------\n
+   │ acquire_lock() {\n
+   │     if mkdir "${LOCK_DIR}" 2>/dev/null; then\n
+   │         echo "$$" > "${PID_FILE}"\n
+   │         log_info "Acquired PID lock ${LOCK_DIR} (pid=$$)"\n
+   │     else\n
+   │         local existing_pid\n
+   │         existing_pid="$(cat "${PID_FILE}" 2>/dev/null || echo 'unknown')"\n
+   │         log_error "Another instance is running (PID: ${existing_pid})"\n
+   │         log_error "If stale, remove ${LOCK_DIR} and retry."\n
+   │         exit 3\n
+   │     fi\n
+   │ }\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Environment validation\n
+   │ # -----------------------------------------------------------------------------\n
+   │ validate_environment() {\n
+   │     if [[ ! -d "${PROJECT_DIR}" ]]; then\n
+   │         log_error "PROJECT_DIR does not exist: ${PROJECT_DIR}"\n
+   │         exit 2\n
+   │     fi\n
+   │ \n
+   │     if ! command -v "${PHP_BIN}" >/dev/null 2>&1; then\n
+   │         log_error "PHP binary not found (${PHP_BIN}). Install PHP or set PHP_BIN env."\n
+   │         exit 2\n
+   │     fi\n
+   │ \n
+   │     if [[ ! -f "${PROJECT_DIR}/artisan" ]]; then\n
+   │         log_error "artisan not found in ${PROJECT_DIR}. Is this a Laravel project?"\n
+   │         exit 2\n
+   │     fi\n
+   │ \n
+   │     if [[ ! -f "${PROJECT_DIR}/phpunit.xml" ]]; then\n
+   │         log_error "phpunit.xml not found in ${PROJECT_DIR}."\n
+   │         exit 2\n
+   │     fi\n
+   │ \n
+   │     mkdir -p "${RESULTS_DIR}"\n
+   │ }\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Argument parsing\n
+   │ # -----------------------------------------------------------------------------\n
+   │ parse_args() {\n
+   │     while [[ $# -gt 0 ]]; do\n
+   │         case "$1" in\n
+   │             --super)\n
+   │                 ACTOR_MODE="super"\n
+   │                 shift\n
+   │                 ;;\n
+   │             --business=*)\n
+   │                 ACTOR_MODE="business"\n
+   │                 BUSINESS_KEY="${1#*=}"\n
+   │                 shift\n
+   │                 ;;\n
+   │             --filter=*)\n
+   │                 PHPUNIT_FILTER="${1#*=}"\n
+   │                 shift\n
+   │                 ;;\n
+   │             --verbose|-v)\n
+   │                 VERBOSE=1\n
+   │                 shift\n
+   │                 ;;\n
+   │             --help|-h)\n
+   │                 sed -n '2,20p' "$0"\n
+   │                 exit 0\n
+   │                 ;;\n
+   │             *)\n
+   │                 log_error "Unknown argument: $1"\n
+   │                 exit 2\n
+   │                 ;;\n
+   │         esac\n
+   │     done\n
+   │ }\n
+   │ \n
+   │ # -----------------------------------------------------------------------------\n
+   │ # Main\n
+   │ # -----------------------------------------------------------------------------\n
+   │ main() {\n
+   │     parse_args "$@"\n
+   │     acquire_lock\n
+   │     validate_environment\n
+   │ \n
+   │     log_info "Project dir  : ${PROJECT_DIR}"\n
+   │     log_info "Actor mode   : ${ACTOR_MODE}"\n
+   │     [[ -n "${BUSINESS_KEY}" ]] && log_info "Business key : ${BUSINESS_KEY}"\n
+   │     log_info "Timestamp    : ${TIMESTAMP}"\n
+   │     log_info "Error log    : ${ERROR_LOG}"\n
+   │     log_info "Pass log     : ${PASS_LOG}"\n
+   │ \n
+   │     cd "${PROJECT_DIR}"\n
+   │ \n
+   │     # Export the timestamp so TestLogger picks it up consistently\n
+   │     export TEST_RUN_TIMESTAMP="${TIMESTAMP}"\n
+   │ \n
+   │     # Determine the actor\n
+   │     case "${ACTOR_MODE}" in\n
+   │         super)\n
+   │             export ACTING_AS_USER="admin"\n
+   │             ;;\n
+   │         business)\n
+   │             case "${BUSINESS_KEY}" in\n
+   │                 gym1)    export ACTING_AS_USER="a" ;;\n
+   │                 gym2)    export ACTING_AS_USER="b" ;;\n
+   │                 shared)  export ACTING_AS_USER="c" ;;\n
+   │                 *)\n
+   │                     log_error "Unknown business key: ${BUSINESS_KEY} (expected gym1|gym2|shared)"\n
+   │                     exit 2\n
+   │                     ;;\n
+   │             esac\n
+   │             ;;\n
+   │         *)\n
+   │             log_error "Invalid actor mode: ${ACTOR_MODE}"\n
+   │             exit 2\n
+   │             ;;\n
+   │     esac\n
+   │ \n
+   │     log_info "Acting as    : ${ACTING_AS_USER}"\n
+   │ \n
+   │     # Build PHPUnit arguments\n
+   │     local phpunit_args=()\n
+   │     phpunit_args+=("--testdox")\n
+   │     [[ "${VERBOSE}" -eq 1 ]] && phpunit_args+=("--verbose") || phpunit_args+=("--no-progress")\n
+   │     [[ -n "${PHPUNIT_FILTER}" ]] && phpunit_args+=("--filter=${PHPUNIT_FILTER}")\n
+   │ \n
+   │     # Run the suite — silent unless --verbose\n
+   │     log_info "Starting PHPUnit…"\n
+   │     if [[ "${VERBOSE}" -eq 1 ]]; then\n
+   │         "${PHP_BIN}" artisan test "${phpunit_args[@]}"\n
+   │     else\n
+   │         if ! "${PHP_BIN}" artisan test "${phpunit_args[@]}" >"${PASS_LOG}" 2>"${ERROR_LOG}"; then\n
+   │             log_error "PHPUnit reported failures. See ${ERROR_LOG}."\n
+   │             exit 1\n
+   │         fi\n
+   │     fi\n
+   │ \n
+   │     log_info "All tests passed. See ${PASS_LOG} for the testdox output."\n
+   │ }\n
+   │ \n
+   │ main "$@"\n
+   │ \n
+   │ ' [UTF-8](length: 7559) contains "db:seed --class=MandatoryTemporaryTestDataSeeder --env=testing" [ASCII](length: 62).
+   │
+   │ /home/user/Program/Saas/product-onebase/tests/Feature/BusinessSlugLoginTest.php:46
+   │
+ ✔ Feature four reserved slug rule blocks generic paths
+
+Follow Up (Tests\Feature\FollowUp)
+ ✔ Follow up feature files remain present after feature one
+
+Invoice Number Generator (Tests\Unit\InvoiceNumberGenerator)
+ ✔ Step 1: Given no existing invoices → returns GY-1
+ ✔ Step 2: Given two invoices in the fiscal year → returns GY-3
+ ✔ Step 3: Given only out-of-range invoices → returns GY-1
+
+Lead (Tests\Feature\Lead)
+ ✔ Enquiry form uses requested source options and removes goal
+ ✔ Enquiry model and api schema do not expose goal
+ ✔ Feature two enquiry dob is optional and lead owner labels are clean
+
+Mark Subscriptions Status Command (Tests\Feature\MarkSubscriptionsStatusCommand)
+ ✔ It marks expired and expiring subscriptions and sends database notification
+
+Member (Tests\Feature\Member)
+ ✔ Member form uses requested source options and removes goal
+ ✔ Member model and api schema do not expose goal
+ ✔ Feature three members receive locked global m prefixed codes
+
+Member Code Generator (Tests\Unit\MemberCodeGenerator)
+ ✔ Generated member code uses m prefix and three uppercase alphanumeric characters
+ ✔ Member creation assigns global unique m prefixed codes
+ ✔ Member code is locked after creation
+ ✔ Soft deleted member code is not reused
+
+Payment (Tests\Feature\Payment)
+ ✔ Invoice transaction payment files remain present after feature one
+
+Role Permission (Tests\Feature\RolePermission)
+ ✔ Role and permission files remain present after feature one
+
+Subscription (Tests\Feature\Subscription)
+ ✔ Subscription feature files remain present after feature one
+
+Tenant Isolation (Tests\Feature\TenantIsolation)
+ ✔ Tenant isolation trait remains present after feature one
+ ✔ Feature four slug login preserves tenant isolation contract
+
+Validation (Tests\Feature\Validation)
+ ✔ Member and enquiry source validation allows only requested values
+ ✔ Feature two enquiry dob remains nullable in api validation
+
+FAILURES!
+Tests: 110, Assertions: 539, Failures: 2.

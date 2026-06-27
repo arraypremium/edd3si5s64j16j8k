@@ -1,0 +1,125 @@
+# Illuminate\Database\QueryException - Internal Server Error
+
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'App\Filament\Resources\Enquiries\EnquiryResource' in 'INSERT INTO' (Connection: mysql, Host: 127.0.0.1, Port: 3306, Database: gymie, SQL: insert into `roles` (`name`, `guard_name`, `App\Filament\Resources\Enquiries\EnquiryResource`, `App\Filament\Resources\Expenses\ExpenseResource`, `App\Filament\Resources\FollowUps\FollowUpResource`, `App\Filament\Resources\Invoices\InvoiceResource`, `App\Filament\Resources\Members\MemberResource`, `App\Filament\Resources\Plans\PlanResource`, `App\Filament\Resources\Services\ServiceResource`, `App\Filament\Resources\Subscriptions\SubscriptionResource`, `pages_tab`, `widgets_tab`, `gym_id`, `updated_at`, `created_at`) values (limited access, web, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 2026-06-26 18:37:32, 2026-06-26 18:37:32))
+
+PHP 8.5.7
+Laravel 12.62.0
+127.0.0.1:8000
+
+## Stack Trace
+
+0 - vendor/laravel/framework/src/Illuminate/Database/Connection.php:838
+1 - vendor/laravel/framework/src/Illuminate/Database/Connection.php:794
+2 - vendor/laravel/framework/src/Illuminate/Database/MySqlConnection.php:42
+3 - vendor/laravel/framework/src/Illuminate/Database/Query/Processors/MySqlProcessor.php:35
+4 - vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php:4170
+5 - vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php:2237
+6 - vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1436
+7 - vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1401
+8 - vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php:1240
+9 - vendor/filament/filament/src/Resources/Pages/CreateRecord.php:221
+10 - vendor/filament/filament/src/Resources/Pages/CreateRecord.php:113
+11 - vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:36
+12 - vendor/laravel/framework/src/Illuminate/Container/Util.php:43
+13 - vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:96
+14 - vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php:35
+15 - vendor/livewire/livewire/src/Wrapped.php:23
+16 - vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php:697
+17 - vendor/livewire/livewire/src/Mechanisms/HandleComponents/HandleComponents.php:240
+18 - vendor/livewire/livewire/src/LivewireManager.php:131
+19 - vendor/livewire/livewire/src/Mechanisms/HandleRequests/HandleRequests.php:205
+20 - vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php:46
+21 - vendor/laravel/framework/src/Illuminate/Routing/Route.php:265
+22 - vendor/laravel/framework/src/Illuminate/Routing/Route.php:211
+23 - vendor/laravel/framework/src/Illuminate/Routing/Router.php:822
+24 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+25 - vendor/livewire/livewire/src/Mechanisms/HandleRequests/RequireLivewireHeaders.php:19
+26 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+27 - vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php:50
+28 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+29 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php:87
+30 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+31 - vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php:48
+32 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+33 - vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:120
+34 - vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php:63
+35 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+36 - vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php:36
+37 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+38 - vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php:74
+39 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+40 - app/Http/Middleware/SetAppLocale.php:49
+41 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+42 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:137
+43 - vendor/laravel/framework/src/Illuminate/Routing/Router.php:821
+44 - vendor/laravel/framework/src/Illuminate/Routing/Router.php:800
+45 - vendor/laravel/framework/src/Illuminate/Routing/Router.php:764
+46 - vendor/laravel/framework/src/Illuminate/Routing/Router.php:753
+47 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:200
+48 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:180
+49 - vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php:19
+50 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+51 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php:27
+52 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+53 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php:47
+54 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+55 - vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php:27
+56 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+57 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php:109
+58 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+59 - vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php:61
+60 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+61 - vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php:58
+62 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+63 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php:22
+64 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+65 - vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php:26
+66 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:219
+67 - vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php:137
+68 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:175
+69 - vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:144
+70 - vendor/laravel/framework/src/Illuminate/Foundation/Application.php:1220
+71 - public/index.php:20
+72 - vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php:23
+
+## Request
+
+POST /livewire-ae4a1720/update
+
+## Headers
+
+* **host**: 127.0.0.1:8000
+* **connection**: keep-alive
+* **content-length**: 4146
+* **sec-ch-ua-platform**: "Linux"
+* **user-agent**: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
+* **sec-ch-ua**: "Brave";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+* **content-type**: application/json
+* **x-livewire**: 1
+* **sec-ch-ua-mobile**: ?0
+* **accept**: */*
+* **sec-gpc**: 1
+* **accept-language**: en-US,en;q=0.5
+* **origin**: http://127.0.0.1:8000
+* **sec-fetch-site**: same-origin
+* **sec-fetch-mode**: cors
+* **sec-fetch-dest**: empty
+* **referer**: http://127.0.0.1:8000/system/shield/roles/create
+* **accept-encoding**: gzip, deflate, br, zstd
+* **cookie**: XSRF-TOKEN=eyJpdiI6Ik1OYkhLU0ZjOUN1MmdjZSthNS9adEE9PSIsInZhbHVlIjoid1dPajM3RnJVMDc4c3hZWjFSMzA4SGZQSkFzS2oyY1RZblR1a0NyamFJNENDNGVMM2FUenFqTjlIajlvbDFFY2prckp4NElBekg4V0JRS1VSKyt3SjhHcmhhVkFLRUNCYXl5QjJHbXNScXRLRHJ3NFlRMjlKZUV6MkltSzhOL1kiLCJtYWMiOiIxYmJmZTVkMWE2Yzk2YmFhMWY2ZjEwZjMxMmY2ZWNiZjBlMGU3YmEwYmZlYTBkY2M3Y2YzM2RjNjczY2E1MDk3IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IjEzM21qbGZxYWtRbHFtYTZSYmJ5OFE9PSIsInZhbHVlIjoiQTl2SG9INHB5UnVoSS9HUmdpK3J1RlV2bzkwU0kxNzBTdVVYaG1MaE04MVkrcVYxNkRhc3BLQUhjbDVoRG5lZXVHdXZTL0lwMjNwdlFqUDQvalZ0R0tubjBYV1ZtaldtYnVWTm1iSEhLTXdLL2FZdTdURjRHb0J5cEJiZnRJYmIiLCJtYWMiOiIzZjJkYmQ4NzAxZDExM2JkMTFlYTkyZDBkYWYzOTE0NThjYzI3ZWZkYTU4MDQ2Y2E1ZGJiZTBjZmUwNWZmMmI1IiwidGFnIjoiIn0%3D
+
+## Route Context
+
+controller: Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate
+route name: default-livewire.update
+middleware: web, Livewire\Mechanisms\HandleRequests\RequireLivewireHeaders
+
+## Route Parameters
+
+No route parameter data available.
+
+## Database Queries
+
+* mysql - select * from `system_admins` where `id` = 1 and `system_admins`.`deleted_at` is null limit 1 (1.82 ms)
+* mysql - select count(*) as aggregate from `roles` where `name` = 'limited access' and `guard_name` = 'web' and `gym_id` is null (0.62 ms)
+
